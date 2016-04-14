@@ -1,0 +1,10 @@
+<h2 class="text-center">Play top tracks</h2>
+<!--<div><a href="#artist-search">Back to artist search</a></div>-->
+<h3 class="text-center">Current Artist: {{artist.name || "None Selected"}}</h3>
+<img ng-src="{{artist.images[0].url}}" class="col-xs-12">
+<audio class="col-xs-12" controls id="player" ng-src="{{currentTrackSrc}}" autoplay></audio>
+<!--Trying to see if I can get current time so that I can do a fade out-->
+<!--<div>Time: {{currentTime}}</div>-->
+<ol class="col-xs-12">
+    <li ng-repeat="track in topTracks" class="selectable" ng-class="{playing: $index === index}"><span ng-click="selectTrack($index)">{{track.name}}</span></li>
+</ol>

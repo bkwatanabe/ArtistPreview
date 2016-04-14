@@ -1,0 +1,10 @@
+<h2 class="col-xs-12 text-center">Search for artists</h2>
+<div>
+    <input class="col-xs-8 col-xs-offset-2" placeholder="Enter artist here" ng-model="search" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }">
+    <div ng-repeat="artist in result">
+        <div class="col-xs-8 col-xs-offset-2 selectable" ng-click="selectArtist(artist)">
+            <img ng-src="{{artist.images.length > 0 ? artist.images[2].url : './img/iconmonstr-user-5.svg'}}" style="width:60px;height:60px;">
+            <span>{{artist.name}}</span>
+        </div>
+    </div>
+</div>

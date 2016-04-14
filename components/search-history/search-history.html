@@ -1,0 +1,9 @@
+<h2>Search History</h2>
+<div>
+    <div ng-if="!searchedArtists.length">You have no history</div>
+    <ul>
+        <li ng-repeat="artist in searchedArtists" class="selectable" ng-click="selectArtist(artist)">
+            {{artist.name}}
+        </li>
+    </ul>
+</div>

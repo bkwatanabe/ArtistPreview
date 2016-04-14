@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Spotify Project</title>
+</head>
+<link rel="stylesheet" href="libs/bootstrap-3.3.6-dist/css/bootstrap.css">
+<style>
+    .container {
+        max-width: 730px;
+        background-color: #cccccc;
+        box-shadow: 0 0 5px black;
+        min-height: 100vh;
+    }
+    .selectable {
+        cursor: pointer;
+    }
+    .selectable:hover {
+        background-color: #0d6de1;
+    }
+    .playing {
+        background-color: #dc1427;
+    }
+
+</style>
+<script src="libs/angular/angular.js"></script>
+<script src="libs/angular/angular-route.js"></script>
+<script src="libs/angular-spotify.js"></script>
+<script src="app.js"></script>
+<script src="components/artist-search/artist-search.js"></script>
+<script src="components/artist-play/artist-play.js"></script>
+<script src="components/search-history/search-history.js"></script>
+<script src="common/localStorageService.js"></script>
+<body ng-app="previewApp">
+    <div class="container">
+        <div class="row">
+            <h1 class="col-xs-12 text-center">Preview Top Tracks With Spotify</h1>
+            <artist-search class="col-xs-6"></artist-search>
+            <artist-play class="col-xs-6"></artist-play>
+        </div>
+        <!--<div class="row">-->
+            <!--<h1 class="col-xs-12 text-center">Powered by Spotify2</h1>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div ng-view></div>-->
+            <!--&lt;!&ndash;<search-history class="col-xs-6"></search-history>&ndash;&gt;-->
+        <!--</div>-->
+    </div>
+</body>
+</html>
